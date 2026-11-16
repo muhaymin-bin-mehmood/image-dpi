@@ -1,0 +1,54 @@
+{
+  "name": "image-dpi",
+  "version": "0.1.0",
+  "description": "Read and set the DPI of JPEG and PNG files from raw bytes. Zero dependencies, works in the browser and Node, never re-encodes the image.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [
+    "dpi",
+    "ppi",
+    "image",
+    "jpeg",
+    "png",
+    "jfif",
+    "exif",
+    "phys",
+    "resolution",
+    "print-size",
+    "metadata",
+    "browser"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muhaymin-bin-mehmood/image-dpi.git"
+  },
+  "homepage": "https://batchset.com/tools/dpi-checker",
+  "bugs": "https://github.com/muhaymin-bin-mehmood/image-dpi/issues",
+  "author": "Muhaymin Bin Mehmood",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}
